@@ -12,7 +12,7 @@ import UIKit
 class MainView:UIView {
     var tableView = UITableView()
     
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.firstInitialization()
@@ -26,6 +26,7 @@ class MainView:UIView {
         
     }
     
+    // MARK: setting up constraints for the tableView
     fileprivate func setupConstraints() {
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true

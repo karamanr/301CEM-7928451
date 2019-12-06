@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// MARK: set up the variables we are going to need to display the temperature
 class MainOfferModel:Codable {
     
     var temp:Float?

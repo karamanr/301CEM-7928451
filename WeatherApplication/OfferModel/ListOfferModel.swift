@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// MARK: set up variables to access the API
 class ListOfferModel:Codable {
     var dt:Float?
     var main:MainOfferModel?

@@ -5,9 +5,8 @@
 //  Created by Ridvan Karaman on 04/12/2019.
 //  Copyright © 2019 Ridvan Karaman. All rights reserved.
 //
-
 import Foundation
-
+// MARK: set up the url 
 class NetworkManager {
     private init() {}
     
@@ -25,7 +24,7 @@ class NetworkManager {
         
         var request = URLRequest(url: urlComponents.url!)
         request.httpMethod = "GET"
-        
+// MARK: use the JSONDecoder to make data presentable
         let task = URLSession(configuration: .default)
         task.dataTask(with: request) { (data, response, error) in
             if error == nil {

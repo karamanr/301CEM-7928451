@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class TableViewCell:UITableViewCell {
     
-    
+// MARK: Outlets set up
     @IBOutlet weak var cityL: UILabel!
     @IBOutlet weak var timeL: UILabel!
     @IBOutlet weak var min_tempL: UILabel!

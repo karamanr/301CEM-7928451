@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// MARK: set up variables to access the API
 class OfferModel:Codable {
     
     var cod:String?

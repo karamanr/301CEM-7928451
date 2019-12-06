@@ -24,12 +24,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
         }
     }
     
-//    override func loadView() {
-//        super.loadView()
-//        self.view = MainView()
-//
-//
-//    }
+
     
     
     override func viewDidLoad() {
@@ -38,7 +33,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
         (self.view as! MainView).tableView.dataSource = self
         
     }
-
+// MARK: set up the nav bar and search bar
     fileprivate func setupNavBar(){
         self.navigationItem.title = "Weather Application"
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -48,7 +43,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
     }
-    
+    // make sure the search results are updated
     func updateSearchResults(for searchController: UISearchController){
         let city = searchController.searchBar.text!
         timer.invalidate()
@@ -64,17 +59,16 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
             })
         }
     }
-    public func tableView( _ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         if data_Ready {
             return self.offerModel!.list!.count
         } else {
             return 0
         }
-        
-        
-    }
+}
     
-    
+    // MARK: set up the table view to show the data from the API and put the data into the labels from the storyboard
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.cityL.text = self.offerModel.city!.name
