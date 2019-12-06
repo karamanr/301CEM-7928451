@@ -81,7 +81,7 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
         cell.timeL.text = self.offerModel.list![indexPath.row].dt_txt
         cell.min_tempL.text = self.offerModel.list![indexPath.row].main!.temp_min?.description
         cell.tempL.text = self.offerModel.list![indexPath.row].main!.temp?.description
-        cell.max_tempL.text = self.offerModel.list![indexPath.row].main!.temp_max?.description
+        cell.max_tempL.text = self.offerModel.list![indexPath.row].main!.temp_max?.description 
         return cell
     }
 
