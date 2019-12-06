@@ -79,9 +79,9 @@ class ViewController: UIViewController, UISearchResultsUpdating, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
         cell.cityL.text = self.offerModel.city!.name
         cell.timeL.text = self.offerModel.list![indexPath.row].dt_txt
-        cell.min_tempL.text = self.offerModel.list![indexPath.row].main!.temp_min?.description
-        cell.tempL.text = self.offerModel.list![indexPath.row].main!.temp?.description
-        cell.max_tempL.text = self.offerModel.list![indexPath.row].main!.temp_max?.description 
+        cell.min_tempL.text = self.offerModel.list![indexPath.row].main!.temp_min!.description
+        cell.tempL.text = self.offerModel.list![indexPath.row].main!.temp!.description
+        cell.max_tempL.text = self.offerModel.list![indexPath.row].main!.temp_max!.description
         return cell
     }
 
