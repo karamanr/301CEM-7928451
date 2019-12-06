@@ -20,6 +20,7 @@ class NetworkManager {
         urlComponents.host = "api.openweathermap.org"
         urlComponents.path = "/data/2.5/forecast"
         urlComponents.queryItems = [URLQueryItem(name: "q", value: city),
+                                    URLQueryItem(name: "units", value: "metric"),
                                     URLQueryItem(name: "appid", value: "9aec6bb7a80395457773a085c7e17f70")]
         
         var request = URLRequest(url: urlComponents.url!)
